@@ -20,8 +20,8 @@ async function main() {
 }
 
 // Index Route
-app.get("/chats",async (req, res) => {
-    lets chats = await Chat.find({});
+app.get("/chats", async (req, res) => {
+    let chats = await Chat.find({});
     console.log(chats);
     res.send("working");
 });
@@ -33,15 +33,15 @@ let chat1 = new Chat({
     created_at: new Date(),
 });
 
-// chat1.save()
-//     .then((res) => {
-//         console.log( res);
-//     })
-//     .catch(err => console.log(err));
+ chat1.save()
+    .then((res) => {
+        console.log( res);
+    })
+    .catch(err => console.log(err));
 
-// app.get('/', (req, res) => {
-//     res.send('root is working');
-// });
+app.get('/', (req, res) => {
+    res.send('root is working');
+});
 
 app.listen(8080, () => {
     console.log("Server is running on port 8080");
