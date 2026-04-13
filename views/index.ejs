@@ -11,12 +11,12 @@
 </body>
 </html>
 
-for(let chat of chats){
-    <div>
+<% for(let chat of chats){ %>
+    <div class="chat">
     <p>From : <%= chat.from %> </p>
-    <p><%= chat.msg %></p>
-    <p><%= chat.received %></p>
-
+    <div class="msg">
+        <p><%= chat.msg %></p>
     </div>
-
-}
+    <p><%= chat.received %></p>
+    </div>
+    <% } %>
