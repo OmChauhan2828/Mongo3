@@ -21,6 +21,8 @@ async function main() {
 
 
 // new route
+app.get("/new", (req, res) => {
+    
 // Index Route
 app.get("/chats", async (req, res) => {
     let chats = await Chat.find({});
