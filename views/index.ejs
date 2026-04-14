@@ -7,7 +7,18 @@
 </head>
 <body>
     <h3>All Chats!</h3>
-    
+    <form method="GET" action="/chats/new">
+        <button>New chat</button>
+    </form>
+    <% for(let chat of chats){ %>
+    <div class="chat">
+    <p>From : <%= chat.from %> </p>
+    <div class="msg">
+        <p><%= chat.msg %></p>
+    </div>
+    <p><%= chat.received %></p>
+    </div>
+    <% } %>
 </body>
 </html>
 
