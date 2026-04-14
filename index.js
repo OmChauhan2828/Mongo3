@@ -8,6 +8,7 @@ const chat = require('./models/chat.js');
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.use(express.urlencoded({ extended: true }));
 
 main()
    .then(() => {
@@ -22,7 +23,13 @@ async function main() {
 
 // new route
 app.get("/new", (req, res) => {
-    
+    res.render("new.ejs");
+});
+
+// create route
+app.post("/chats", (req, res) => {
+    let
+
 // Index Route
 app.get("/chats", async (req, res) => {
     let chats = await Chat.find({});
